@@ -1,0 +1,29 @@
+{% extends "stompnc/template.html" %}
+
+{% block content %}
+
+<div class="grid_16"> <h1> Volunteer Opportunities</h1> </div>
+
+<div class="grid_14">
+    
+    <p> At STOMP the Monster™, we rely on the generosity of volunteers to make this important work possible. If you are interested in assisting us in any capacity, please submit the form below, indicating your areas of interest, and we will contact you. Thank you! </p>
+
+	{% if form.subject.errors %}
+    <ol>
+    {% for error in form.subject.errors %}
+        <li><strong>{{ error|escape }}</strong></li>
+    {% endfor %}
+    </ol>
+	{% endif %}
+	
+	</div>
+
+<div class="grid_12">
+              
+	  <form action="/volunteer/" method="post">{% csrf_token %}
+      {{ form.as_p }}
+      <input name="Submit" type="submit" class="button" style="margin-left:0px;" value="Submit">
+</div>
+
+
+{% endblock %}

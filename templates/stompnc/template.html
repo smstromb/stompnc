@@ -1,0 +1,80 @@
+ {% load ganalytics %}
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="google-site-verification" content="LGRmbIwwCQZJ3iZd17S5BHDOfBoK277S7uzLsQ--Ies" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Stomp the Monster NC</title>
+
+<link href="{{ STATIC_URL }}css/reset.css" rel="stylesheet" type="text/css" />
+<link href="{{ STATIC_URL }}css/style.css" rel="stylesheet" type="text/css" />
+<link href="{{ STATIC_URL }}css/960_16_col.css" rel="stylesheet" type="text/css" />
+
+<script src="{{ STATIC_URL }}js/jquery-1.7.2.min.js"></script>
+<script src="{{ STATIC_URL }}js/lightbox.js"></script>
+
+<link href="{{ STATIC_URL }}css/lightbox.css" rel="stylesheet" />
+
+
+<link href='http://fonts.googleapis.com/css?family=Nunito:700,400' rel='stylesheet' type='text/css'>
+{% ganalytics %}
+</head>
+
+<body>
+
+<div class="container_16">
+
+<!-------------------------------START Header------------------------------->
+<div class="header"> <a href="/index" style="border:none;"><img src="{{ STATIC_URL }}images/logo.png" alt="Stomp the Monster" /></a>
+        
+      <div style="text-align:right; padding-bottom:5px;">
+        <a href="/directors" class="headlink">Board of Directors</a> <!--sub pages mission statement, story, sponsors, board of directors-->
+        <a href="/donate" class="headlink">Donate</a><!--sub pages Events, donate, volunteer-->
+            <a href="/stomps" class="headlink">Stomps</a>
+        <a href="/contact" class="headlink">Contact</a> 
+    </div>
+</div>   
+ 
+<a href="/donate" style="border:none;" ><img src="{{ STATIC_URL }}images/donate.jpg" width="960" height="100" alt="Donate Today" /></a>
+<!-------------------------------END Header------------------------------->
+
+<br /> 
+
+<!-------------------------------START Content - Do Not Edit Content Above------------------------------->
+
+{% block content %}{% endblock %}
+
+
+<!-------------------------------END Cntent - Do Not Edit Content Below------------------------------->
+
+</div>
+
+<!-------------------------------START footer------------------------------->
+
+<div class="footer">
+
+
+<a href="/index" class="footlink" >Home</a> 
+<a href="/story" class="footlink" >Our Story</a>
+<a href="/directors" class="footlink" >Board of Directors</a> 
+<a href="/events" class="footlink" >Events</a>
+<a href="/donate" class="footlink" >Donate</a>
+<a href="/volunteer" class="footlink" >Volunteer</a>
+<a href="/stomps" class="footlink" >Stomps</a>
+<a href="/contact" class="footlink" >Contact</a> 
+<a href="http://www.stompthemonster.org" class="footlink" >STOMP the Monster NJ</a> 
+
+<p class="foottext">Copyright © 2012 STOMP THE MONSTER, LLC. All Rights Reserved. <br />
+STOMP The Monster™ is a 501(c)(3) Charitable Organization.<br />
+<br /><br />
+STOMP The Monster™ Policy Against Discrimination<br />
+STOMP The Monster™ shall not discriminate on the basis of race, color, religion (creed), gender, age, national origin (ancestry), disability, marital status,sexual orientation, political affiliation or military status, in any of its activities or operations. These activities include, but are not limited to, hiring and firing of staff, selection of volunteers, selection of vendors, selection of grant recipients, and provision of services.</p>
+
+
+
+</div>
+<!-------------------------------END sponsors------------------------------->
+
+</body>
+</html>

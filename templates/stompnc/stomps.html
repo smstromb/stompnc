@@ -1,0 +1,23 @@
+{% extends "stompnc/template.html" %}
+
+{% block content %}
+
+
+<div class="grid_16"> <h1> Stomps - Our Stories </h1></div> 
+
+<!--Bio Start-->
+{% for stomp in stomps %}	
+<div class="holder">
+<div class="grid_14"> 
+
+    <h4>{{ stomp.name }}</h4>
+    
+    <p>{{ stomp.story}}</p>
+
+</div>
+</div>
+{% endfor %}
+
+
+
+{% endblock %}

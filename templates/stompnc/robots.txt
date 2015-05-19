@@ -1,0 +1,33 @@
+# Allows only major search engines and known friendly spiders
+
+# Major Search Engines and Known Friendly Spiders (allowed)
+
+User-agent: Googlebot
+Disallow:
+
+User-agent: MSNBot
+Disallow:
+
+User-agent: Slurp
+Disallow:
+
+User-agent: Teoma
+Disallow:
+
+User-agent: Twiceler
+Disallow:
+
+User-agent: Gigabot
+Disallow:
+
+User-agent: Scrubby
+Disallow:
+
+User-agent: Robozilla
+Disallow:
+
+# Everyone Else (NOT allowed)
+
+User-agent: *
+Disallow: /
+

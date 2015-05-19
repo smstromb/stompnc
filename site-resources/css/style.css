@@ -1,0 +1,250 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+body {
+	background-color: #5595d0;
+	background-image: url(../images/background.png);
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: 400;
+	font-size:13px;
+	color: #393939;
+	/*line-height: 20px;*/
+	background-repeat: repeat-x;
+}
+
+label{
+	display: block;
+	font-weight: bold;
+}
+
+form p{
+	margin-bottom: 1em;
+}
+
+.errorlist{
+	color: red;
+}
+
+/* Global Div Tags
+----------------------------------------------------------------------------------------------------*/
+.container_16 {
+	margin-left: auto;
+	margin-right: auto;
+	width: 960px;
+	background-color:#FFF;
+	border-left: 1px solid #23588c;
+	border-right: 1px solid #23588c;
+	border-bottom: 1px solid #23588c;
+	padding-bottom: 30px;
+}
+
+.header {
+	clear: both;
+	background-color: #000;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 20px;
+	color: #FFF;
+	font-weight: bold;
+
+	}
+
+.holder {
+	width: 940px;
+	clear: both;
+	display: block;
+	overflow: visible;
+	padding-top:15px;
+}	
+
+.footer {
+	margin-left: auto;
+	margin-right: auto;
+	width: 950px;
+	clear: both;
+	display: block;
+	padding-top: 0px;
+	text-align: right;
+	}
+
+/* Elements
+----------------------------------------------------------------------------------------------------*/
+	
+.linebreak {
+	clear: both;
+	padding-bottom: 15px;
+	padding-top:15px;
+}
+
+.calendartab {
+	background-color: #4381b9;
+	border-radius: 5px 5px 5px 5px;
+	color: #ffffff;
+	height: 40px;
+	width: 50px;
+	float: left;
+	margin: 5px;
+	margin-right:10px;
+	font-weight: bold;
+	text-align: center;
+	padding-top:5px;
+	font-size: 11px;
+}
+
+/* Typography
+----------------------------------------------------------------------------------------------------*/
+
+h1{
+	color: #562e73;
+	font-size: 24px;
+	font-family: 'Nunito', sans-serif;
+	font-weight: 800;
+	font-variant: small-caps;
+	line-height: 30px;
+	padding-top: 14px;
+	padding-bottom: 14px;
+	}
+
+h2{
+	color: #562e73;
+	font-size: 20px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-family: 'Nunito', sans-serif;
+	font-weight: 700;
+	font-variant: small-caps;
+	background-color:#ffffff;
+	margin-bottom:3px;
+
+	}
+	
+h3{
+	color: #562e73;
+	font-size: 18px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-family: 'Nunito', sans-serif;
+	font-weight: 700;
+	font-size: 22px;
+	font-variant: small-caps;
+	background-color:#ffffff;
+	display: inline;
+	position: relative;
+	z-index: 2;
+	padding-left: 0px;
+	padding-right: 10px;
+	padding-bottom: 0px;
+	padding-top: 0px;
+	margin: 0px;
+	}
+	
+h4 { font-weight: bold; font-size:15px; font-color: #515151; margin-bottom:3px;}
+
+p {
+       /*padding-bottom: 18px;*/
+       font-size:13px; 
+       line-height:20px;
+       color:#4e6983;}
+       
+img{
+	margin-bottom: 5px;
+}       
+       
+p.square{
+	height: 90px;
+	overflow: hidden;
+	float: left;
+	margin-bottom:25px;
+	margin-right: 4%;
+	width: 220px;
+}
+
+
+p.blurb {
+       color: #562e73;
+       font-size: 20px;
+       font-family: 'Nunito', sans-serif;
+       font-weight: 700;
+       display: block;        
+       line-height: 28px;
+       margin-top: 20px;
+       margin-bottom: 20px;
+       }
+	
+a:link {text-decoration: none;}
+
+a:hover {text-decoration:underline;}
+
+.headlink {
+	color: #F0F1FF;
+	font-size: 17px;
+	text-decoration: none;
+	padding:8px;
+	font-variant: small-caps;
+}
+
+.header a:hover{
+	text-decoration: none; color: #8bb2e3;
+}
+
+.headsmalllink {
+	color: #F0F1FF;
+	font-size: 13px;
+	text-decoration: none;
+	padding:3px;
+	font-variant: small-caps;
+}
+
+.footlink {
+	font-family: Arial, Helvetica, sans-serif;
+	color: #fff;
+	font-size: 12px;
+	text-decoration: none;
+	padding:3px;
+	font-weight: bold;
+	font-variant: small-caps;
+}
+
+.foottext {
+	font-family: Arial, Helvetica, sans-serif;
+	color: #21427B;
+	font-size: 11px;
+	padding-top: 28px;
+	line-height: 13px;
+	text-align: center;
+}
+
+.columntop {
+	background: none repeat scroll 0 0 #f1eeea;
+	display: block;
+	height: 3px;
+	width: 100%;
+	z-index:-1;
+	margin: -17px;
+	padding: 0;
+	margin-left: 10px;
+}
+
+.description {color:#4e6983;}
+
+
+/* Button
+----------------------------------------------------------------------------------------------------*/
+td, tr{padding: 10px;}
+
+.button {
+	border: 1px solid #6a3e8a;
+	border-radius: 5px 5px 5px 5px;
+	color: #ffffff;
+	background-color:#562e73;
+	padding: 8px 18px;
+	text-decoration:none;
+	margin-top:8px;
+	display: inline-block;
+	margin-left:130px;
+}
+
+.button:hover {
+	background-color:#270e3a;
+	text-decoration:none;
+}
+

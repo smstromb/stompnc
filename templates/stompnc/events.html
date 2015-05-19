@@ -1,0 +1,41 @@
+{% extends "stompnc/template.html" %}
+
+{% block content %}
+{% load thumbnail %}
+
+<!-------------------------------START Content - Do Not Edit Content Above------------------------------->
+
+<div class="grid_13">
+
+{% for event in events %}
+<div>
+	<h1> {{ event.name }} </h1>
+	<b> When: </b> {{ event.when }}<br />
+	<b> Where: </b> {{ event.where }}
+
+	<br /><br />
+
+    {% autoescape off %}
+    <p>{{ event.description }}</p>
+    {% endautoescape %}
+
+
+<br/>
+
+{% if event.link %}
+	<a href="{{event.link}}">{{event.linkDescription}}</a>
+{% endif %}
+
+{% for image in event.gallery.files %}
+<a href="{% thumbnail image 500x500 %}" rel="lightbox[{{event.id}}]"><img src="{% thumbnail image 80x80 crop %}" /></a>
+{% endfor %}
+
+</div>
+<br/><br/>
+{% endfor %}
+
+</div>
+
+<!-------------------------------END Cntent - Do Not Edit Content Below------------------------------->
+
+{% endblock %}

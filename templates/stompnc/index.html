@@ -1,0 +1,170 @@
+ {% extends "stompnc/template.html" %} 
+ {% block content %} 
+ {% load thumbnail %}
+
+
+<!-------------------------------START about section------------------------------->
+<div class="holder">
+
+	<!--Column 1-->
+	<div class="grid_7">
+		<h1>WELCOME</h1>
+		<p style="font-size: 13px; line-height: 20px; margin-bottom:15px;" class="description">{{ homepage.welcomeMessage }}</p>
+
+	</div>
+
+
+	<!--Column 2-->
+	<table width="510" border="0">
+		<tr>
+			<td WIDTH="50%">
+				<h2>Volunteer</h2>
+				<p class="description">{{ homepage.volunteerMessage }}</p> <a
+				class="button" href="/volunteer" title="Volunteer"> Volunteer </a>
+			</td>
+			<td>
+				<h2>Contact</h2>
+				<p class="description">{{ homepage.contactMessage }}</p> <br /> <a
+				class="button" href="/contact" title="Say Hello"> Say Hello </a>
+			</td>
+		</tr>
+		<tr>
+			<td WIDTH="50%">
+				<h2>Events</h2>
+				<p class="description">{{ homepage.eventMessage }}</p> <a
+				class="button" href="/events" title="Sign Up">Participate </a>
+			</td>
+			<td><h2>Who We Are</h2>
+				<p class="description">{{ homepage.boardMessage }}</p> <br /> <a
+				class="button" href="/directors" title="Learn More">Learn
+					More</a></td>
+		</tr>
+	</table>
+
+
+
+<!-------------------------------END about section------------------------------->
+
+<!--BREAK-->
+
+<div class="grid_16" style="height: 35px;"></div>
+
+
+<!-------------------------------START Donations Events Sponsors section------------------------------->
+
+	<!--Column 3-->
+	<div class="grid_5">
+		
+		<h3>In The Press</h3>
+			<div class="columntop"></div>
+		
+		<br /><br />
+			<a href="https://www.facebook.com/StompTheMonsterNC"><img src="{{ STATIC_URL }}images/facebook_logo.jpg" width="52%" style="margin-left:5px;"/></a>	
+	<img src="{{ STATIC_URL }}images/lineBreak.png" class="linebreak" width="292" height="3" alt="lineBreak" />
+
+		{% for press in pressStatements %}
+
+	<div class="calendartab">
+		<span style="font-size: 15px;"> {{press.month}} <br /> {{press.year}} </span> 
+	</div>
+	
+		<div>
+			<h4 style="padding-top:5px;">{{ press.name }}</h4>
+			<p class="description">
+				<a href="{{press.link}}">Read Here</a>
+			</p>
+		</div>
+		<img src="{{ STATIC_URL }}images/lineBreak.png" class="linebreak" width="292" height="3" alt="lineBreak" />
+
+		{% endfor %}
+
+
+	</div>
+
+<!--Column 1-->
+<div class="grid_5">
+	<h3>Recent Donations</h3>
+	<div class="columntop"></div>
+	<br />
+	<br /> {% for donator in donators %}
+	<h4>{{ donator.name }}</h4>
+	<p class="description">{{ donator.donate_date }} - {{ donator.amount }} {{ donator.inHonorOf }}</p>
+	<img src="{{ STATIC_URL }}images/lineBreak.png" class="linebreak" width="292" height="3" alt="lineBreak" />
+	
+	 {% endfor %}
+
+		
+</div>
+
+<!--Column 2-->
+<div class="grid_5">
+
+	<h3>Next Events</h3>
+	<div class="columntop"></div>
+	<br />
+	<br />
+	
+	{% for event in events %}
+	
+	{% if event.isUpcoming %}
+	<div class="calendartab">
+		<span style="font-size: 15px;"> {{event.day}}  <br /> {{event.month}} </span>
+	</div>
+	
+	<div class="grid_3" style="margin-left:0px;">
+		<h4 style="padding-top:5px;"><a href="/events" style="font-color: #515151;">{{ event.name }} </a></h4>
+		<p class="description">
+			<b> When: </b> {{ event.when }}<br /> <b> Where: </b> {{ event.where }}<br />
+		</p>
+	</div>
+	
+		<img src="{{ STATIC_URL }}images/lineBreak.png" class="linebreak" width="292" height="3" alt="lineBreak" />
+	{% endif %}
+	{% endfor %}
+</div>
+
+<!--BREAK-->
+<div class="grid_16" style="height: 35px;"></div>
+
+<div class="grid_2" style="height: 35px;"></div>
+
+<div class="grid_5">
+	<img width='280' src="{{STATIC_URL}}images/banner4.gif"/> <br /></br>
+</div>
+
+<div class="grid_1" style="height: 35px;"></div>
+
+<div class="grid_5">
+
+	<img width='280' src="{{STATIC_URL}}images/LandmarkLogo-Higher Res.jpg"/> <br /></br>
+	<p class="description">Stomp the Monster North Carolina welcomes Landmark Aviation as a leading corporate donor.</p>
+
+</div>
+
+<div class="grid_16" style="height: 35px;"></div>
+<div class="grid_2" style="height: 35px;"></div>
+
+<div class="grid_5">
+
+	
+
+</div>
+
+
+<div class="grid_1" style="height: 35px;"></div>
+
+
+<div class="grid_5">
+
+	
+
+</div>
+
+
+<!-------------------------------END Donations Events Sponsors section------------------------------->
+
+</div>
+
+
+
+{% endblock %}

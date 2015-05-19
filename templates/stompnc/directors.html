@@ -1,0 +1,40 @@
+ {% extends "stompnc/template.html" %}
+
+{% block content %}
+{% load thumbnail %}
+
+<div class="grid_16"> <h1> Who We Are </h1></div> 
+
+<!--Bio Start-->
+{% for ncMember in ncMembers %}	
+<div class="holder">
+<div class="grid_11"> 
+
+    <h4>{{ ncMember.name }}</h4>
+    {% autoescape off %}
+    <p>{{ ncMember.bio }}</p>
+    {% endautoescape %}
+    {% if ncMember.email %}
+    <a href="mailto:{{ncMember.email}}">{{ncMember.email}}</a>
+    {% endif %}
+</div>
+<div class="grid_4" > <img src="{% thumbnail ncMember.image 235x235 crop %}"/></div>
+</div>
+{% endfor %}
+
+{% for njMember in njMembers %}	
+<div class="holder">
+<div class="grid_11"> 
+
+    <h4>{{ njMember.name }}</h4><br/>
+    {% autoescape off %}
+    <p>{{ njMember.bio }}</p>
+    {% endautoescape %}
+</div>
+<div class="grid_4" > <img src="{% thumbnail njMember.image 235x235 crop %}"/></div>
+</div>
+{% endfor %}
+
+
+
+{% endblock %}
